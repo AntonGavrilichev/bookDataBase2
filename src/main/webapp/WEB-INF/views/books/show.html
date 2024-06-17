@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Show</title>
+    <title>Страница книги</title>
 </head>
 <body>
 <p th:text="${book.getTitle() + ', ' + book.getAuthor() + ', ' + book.getYear()}">VALUE</p>
@@ -36,6 +36,10 @@
 
 <form th:method="DELETE" th:action="@{/books/{id}(id=${book.getId()})}">
     <input type="submit" value="Удалить"/>
+</form>
+<br/>
+<form action="/index.jsp" >
+    <button>Меню</button>
 </form>
 <style>
     body {

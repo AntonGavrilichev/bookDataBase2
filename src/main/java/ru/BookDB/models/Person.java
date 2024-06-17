@@ -27,7 +27,7 @@ public class Person {
     @OneToMany(mappedBy = "owner")
     private List<Book> books;
 
-    // Конструктор по умолчанию нужен для Spring
+
     public Person() {
 
     }

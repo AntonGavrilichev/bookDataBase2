@@ -70,7 +70,6 @@ public class BooksService {
 
 
     public Person getBookOwner(int id) {
-        // Здесь Hibernate.initialize() не нужен, так как владелец (сторона One) загружается не лениво
         return booksRepository.findById(id).map(Book::getOwner).orElse(null);
     }
 
